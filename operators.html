@@ -39,6 +39,20 @@
     <h1 class="page-title">干员图鉴</h1>
     <p class="lead">六名开局常用干员，按职业与稀有度排列。</p>
 
+    <section class="filter-bar" aria-label="筛选与搜索">
+      <div class="filter-row">
+        <label class="sr-only" for="search">按名字搜索干员</label>
+        <input class="search-input" id="search" type="search" placeholder="输入干员名字…" autocomplete="off">
+        <button class="filter-toggle" id="filter-toggle" type="button"
+                aria-expanded="false" aria-controls="filter-panel">
+          筛选<span class="filter-count" id="filter-count"></span>
+        </button>
+        <p class="op-count" id="op-count" aria-live="polite">共 6 名干员</p>
+      </div>
+
+      <div class="filter-panel" id="filter-panel" aria-label="按职业筛选"></div>
+    </section>
+
     <section class="op-grid" aria-label="干员列表">
       <article class="op-card">
         <div class="op-avatar" aria-hidden="true"></div>
@@ -100,6 +114,11 @@
         </div>
       </article>
     </section>
+
+    <p class="empty" id="empty" hidden>
+      没有找到符合条件的干员。换个名字，或者清除筛选。
+      <button class="clear-btn" id="clear" type="button">清除全部</button>
+    </p>
   </main>
 
   <footer class="site-footer">

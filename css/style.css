@@ -501,6 +501,171 @@ main {
   color: var(--muted);
 }
 
+/* --- 筛选与搜索 ---------------------------------------------------------- */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.filter-bar {
+  margin-bottom: 26px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.filter-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.search-input {
+  flex: 1 1 220px;
+  min-width: 0;
+  padding: 9px 12px;
+  font: inherit;
+  font-size: 14px;
+  color: var(--text);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.search-input::placeholder {
+  color: #5f6672;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.filter-toggle {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 16px;
+  font: inherit;
+  font-size: 14px;
+  color: var(--text);
+  background: transparent;
+  border: 1px solid var(--line-hi);
+  border-radius: 0;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+
+.filter-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* 有职业被选中时，按钮变成黄底黑字 */
+.filter-toggle.is-active {
+  color: #0b0c0f;
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.filter-count {
+  font-size: 12px;
+  letter-spacing: 0.06em;
+}
+
+.op-count {
+  margin: 0 0 0 auto;
+  font-size: 13px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.filter-panel {
+  display: none;
+  gap: 8px;
+  padding-top: 14px;
+}
+
+.filter-panel.is-open {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.filter-btn {
+  padding: 6px 16px;
+  font: inherit;
+  font-size: 14px;
+  color: var(--muted);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 0;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+
+.filter-btn:hover {
+  color: var(--text);
+  border-color: var(--line-hi);
+}
+
+.filter-btn[aria-pressed="true"] {
+  font-weight: 600;
+  color: #0b0c0f;
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+/* 卡片被 JS 隐藏时，必须压过 .op-card 的 display: flex */
+.op-card[hidden] {
+  display: none;
+}
+
+.empty {
+  margin: 44px 0;
+  text-align: center;
+  color: var(--muted);
+}
+
+.empty[hidden] {
+  display: none;
+}
+
+.clear-btn {
+  margin-left: 10px;
+  padding: 5px 14px;
+  font: inherit;
+  font-size: 13px;
+  color: var(--accent);
+  background: transparent;
+  border: 1px solid var(--accent);
+  border-radius: 0;
+  cursor: pointer;
+  transition: color 0.15s, background 0.15s;
+}
+
+.clear-btn:hover {
+  color: #0b0c0f;
+  background: var(--accent);
+}
+
+@media (min-width: 721px) {
+  .filter-panel.is-open {
+    flex-flow: row wrap;
+  }
+}
+
 /* --- 响应式 -------------------------------------------------------------- */
 
 @media (max-width: 900px) {
