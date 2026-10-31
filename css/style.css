@@ -643,7 +643,8 @@ main {
 }
 
 .clear-btn {
-  margin-left: 10px;
+  display: block;
+  margin: 14px auto 0;
   padding: 5px 14px;
   font: inherit;
   font-size: 13px;
@@ -658,6 +659,15 @@ main {
 .clear-btn:hover {
   color: #0b0c0f;
   background: var(--accent);
+}
+
+/* 键盘用户能清楚看到焦点落在哪个控件上 */
+.search-input:focus-visible,
+.filter-toggle:focus-visible,
+.filter-btn:focus-visible,
+.clear-btn:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
 }
 
 @media (min-width: 721px) {
@@ -712,6 +722,10 @@ main {
 
   main {
     padding: 36px 18px 56px;
+  }
+
+  .op-count {
+    margin-left: 0;
   }
 
   .hero {

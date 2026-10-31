@@ -94,5 +94,14 @@
     render();
   });
 
+  // 6 · 按 Esc 收起面板，焦点回到筛选按钮
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && panel.classList.contains('is-open')) {
+      panel.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.focus();
+    }
+  });
+
   render();
 })();
