@@ -1,6 +1,6 @@
-// js/main.js — 导航高亮 + 手机端菜单
+// js/main.js — nav highlighting + mobile menu
 (function () {
-  // 1 · 当前页面对应的导航链接高亮
+  // 1 · Highlight the nav link that matches the current page
   var current = window.location.pathname.split('/').pop() || 'index.html';
   var links = document.querySelectorAll('.nav-links a');
 
@@ -11,7 +11,7 @@
     }
   });
 
-  // 2 · 窄屏下点击按钮展开/收起菜单
+  // 2 · On narrow screens, the button opens and closes the menu
   var toggle = document.querySelector('.nav-toggle');
   var list = document.getElementById('nav-links');
 

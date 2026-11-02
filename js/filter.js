@@ -1,5 +1,6 @@
-// js/filter.js — 按名字搜索、按职业筛选干员卡片
-// 只要页面上同时存在 .filter-bar 和 .op-grid 就启动，其他页面引入也不会有副作用
+// js/filter.js — search operator cards by name, filter them by class
+// Starts only when the page has both .filter-bar and .op-grid,
+// so including it on other pages has no side effects.
 (function () {
   var bar = document.querySelector('.filter-bar');
   var grid = document.querySelector('.op-grid');
@@ -14,17 +15,17 @@
   var clear = document.getElementById('clear');
   var badge = document.getElementById('filter-count');
 
-  var query = '';      // 搜索词，已转小写
-  var selected = [];   // 已选职业
+  var query = '';      // search term, lowercased
+  var selected = [];   // selected classes
 
-  // 1 · 职业从卡片自身的 .op-class 收集，按首次出现顺序去重
+  // 1 · Classes come from the cards themselves, de-duplicated in first-seen order
   var jobs = [];
   cards.forEach(function (card) {
     var job = card.querySelector('.op-class').textContent.trim();
     if (job && jobs.indexOf(job) === -1) jobs.push(job);
   });
 
-  // 2 · 每个职业生成一个独立按钮，按钮不是写死的
+  // 2 · One button per class — generated, not hard-coded in the HTML
   jobs.forEach(function (job) {
     var btn = document.createElement('button');
     btn.type = 'button';
@@ -47,13 +48,13 @@
     panel.appendChild(btn);
   });
 
-  // 3 · 筛选按钮上的已选数量，收起面板后也能看到
+  // 3 · Selected count on the toggle, so it stays visible once the panel is closed
   function updateBadge() {
     badge.textContent = selected.length ? ' · ' + selected.length : '';
     toggle.classList.toggle('is-active', selected.length > 0);
   }
 
-  // 4 · 唯一的渲染函数：只给不符合的卡片加上 hidden
+  // 4 · The single render function: only toggles `hidden` on non-matching cards
   function render() {
     var shown = 0;
 
@@ -68,11 +69,11 @@
       if (ok) shown++;
     });
 
-    count.textContent = '显示 ' + shown + ' / ' + cards.length + ' 名干员';
+    count.textContent = 'Showing ' + shown + ' / ' + cards.length + ' operators';
     empty.hidden = shown !== 0;
   }
 
-  // 5 · 事件
+  // 5 · Events
   search.addEventListener('input', function () {
     query = search.value.trim().toLowerCase();
     render();
@@ -94,7 +95,7 @@
     render();
   });
 
-  // 6 · 按 Esc 收起面板，焦点回到筛选按钮
+  // 6 · Esc closes the panel and hands focus back to the toggle
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && panel.classList.contains('is-open')) {
       panel.classList.remove('is-open');

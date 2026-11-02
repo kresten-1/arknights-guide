@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>干员图鉴 · 罗德岛导览</title>
-  <meta name="description" content="六名常用干员的职业、稀有度与一句话推荐。">
+  <title>Operators · Rhodes Island Guide</title>
+  <meta name="description" content="Roles, rarity and a one-line recommendation for six commonly used operators.">
 
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 
-  <meta property="og:title" content="干员图鉴 · 罗德岛导览">
-  <meta property="og:description" content="六名常用干员的职业、稀有度与一句话推荐。">
+  <meta property="og:title" content="Operators · Rhodes Island Guide">
+  <meta property="og:description" content="Roles, rarity and a one-line recommendation for six commonly used operators.">
   <meta property="og:image" content="assets/og-image.png">
   <meta property="og:url" content="https://kresten-1.github.io/arknights-guide/operators.html">
   <meta property="og:type" content="website">
@@ -19,111 +19,111 @@
 </head>
 <body>
   <header class="site-header">
-    <nav class="nav" aria-label="主导航">
+    <nav class="nav" aria-label="Main navigation">
       <a class="brand" href="index.html">
         <span class="brand-mark" aria-hidden="true"></span>
-        <span class="brand-text">罗德岛导览<small>RHODES ISLAND GUIDE</small></span>
+        <span class="brand-text">Rhodes Island Guide<small>ARKNIGHTS STARTER GUIDE</small></span>
       </a>
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">菜单</button>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
       <ul class="nav-links" id="nav-links">
-        <li><a href="index.html">首页</a></li>
-        <li><a href="operators.html">干员图鉴</a></li>
-        <li><a href="guide.html">新手指南</a></li>
-        <li><a href="stages.html">关卡攻略</a></li>
-        <li><a href="about.html">关于</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="operators.html">Operators</a></li>
+        <li><a href="guide.html">Beginner Guide</a></li>
+        <li><a href="stages.html">Stages</a></li>
+        <li><a href="about.html">About</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <h1 class="page-title">干员图鉴</h1>
-    <p class="lead">六名开局常用干员，按职业与稀有度排列。</p>
+    <h1 class="page-title">Operators</h1>
+    <p class="lead">Six operators worth raising early, ordered by role and rarity.</p>
 
-    <section class="filter-bar" aria-label="筛选与搜索">
+    <section class="filter-bar" aria-label="Filter and search">
       <div class="filter-row">
-        <label class="sr-only" for="search">按名字搜索干员</label>
-        <input class="search-input" id="search" type="search" placeholder="输入干员名字…" autocomplete="off">
+        <label class="sr-only" for="search">Search operators by name</label>
+        <input class="search-input" id="search" type="search" placeholder="Type an operator name…" autocomplete="off">
         <button class="filter-toggle" id="filter-toggle" type="button"
                 aria-expanded="false" aria-controls="filter-panel">
-          筛选<span class="filter-count" id="filter-count"></span>
+          Filter<span class="filter-count" id="filter-count"></span>
         </button>
-        <p class="op-count" id="op-count" aria-live="polite">共 6 名干员</p>
+        <p class="op-count" id="op-count" aria-live="polite">6 operators</p>
       </div>
 
-      <div class="filter-panel" id="filter-panel" aria-label="按职业筛选"></div>
+      <div class="filter-panel" id="filter-panel" aria-label="Filter by role"></div>
     </section>
 
-    <section class="op-grid" aria-label="干员列表">
+    <section class="op-grid" aria-label="Operator list">
       <article class="op-card">
         <div class="op-avatar" aria-hidden="true"></div>
         <div class="op-body">
-          <h2 class="op-name">阿米娅</h2>
-          <p class="op-class">术师</p>
-          <p class="op-stars" aria-label="五星">★★★★★</p>
-          <p class="op-note">推荐理由占位：开局就能上手的法术输出，建议优先培养。</p>
+          <h2 class="op-name">Amiya</h2>
+          <p class="op-class">Caster</p>
+          <p class="op-stars" aria-label="5 stars">★★★★★</p>
+          <p class="op-note">Placeholder note: arts damage you can use from the very first stage — worth raising early.</p>
         </div>
       </article>
 
       <article class="op-card">
         <div class="op-avatar" aria-hidden="true"></div>
         <div class="op-body">
-          <h2 class="op-name">能天使</h2>
-          <p class="op-class">狙击</p>
-          <p class="op-stars" aria-label="五星">★★★★★</p>
-          <p class="op-note">推荐理由占位：对地射速稳定，处理大量小怪非常省心。</p>
+          <h2 class="op-name">Exusiai</h2>
+          <p class="op-class">Sniper</p>
+          <p class="op-stars" aria-label="5 stars">★★★★★</p>
+          <p class="op-note">Placeholder note: a steady anti-ground attack speed that makes short work of enemy waves.</p>
         </div>
       </article>
 
       <article class="op-card">
         <div class="op-avatar" aria-hidden="true"></div>
         <div class="op-body">
-          <h2 class="op-name">推进之王</h2>
-          <p class="op-class">近卫</p>
-          <p class="op-stars" aria-label="六星">★★★★★★</p>
-          <p class="op-note">推荐理由占位：前排阻挡兼输出，费用回收手感很好。</p>
+          <h2 class="op-name">Siege</h2>
+          <p class="op-class">Guard</p>
+          <p class="op-stars" aria-label="6 stars">★★★★★★</p>
+          <p class="op-note">Placeholder note: frontline blocking plus damage, with a very comfortable DP refund.</p>
         </div>
       </article>
 
       <article class="op-card">
         <div class="op-avatar" aria-hidden="true"></div>
         <div class="op-body">
-          <h2 class="op-name">闪灵</h2>
-          <p class="op-class">医疗</p>
-          <p class="op-stars" aria-label="五星">★★★★★</p>
-          <p class="op-note">推荐理由占位：单体治疗稳，适合放在压力最大的那条线。</p>
+          <h2 class="op-name">Shining</h2>
+          <p class="op-class">Medic</p>
+          <p class="op-stars" aria-label="5 stars">★★★★★</p>
+          <p class="op-note">Placeholder note: reliable single-target healing, best on the lane under the most pressure.</p>
         </div>
       </article>
 
       <article class="op-card">
         <div class="op-avatar" aria-hidden="true"></div>
         <div class="op-body">
-          <h2 class="op-name">银灰</h2>
-          <p class="op-class">近卫</p>
-          <p class="op-stars" aria-label="六星">★★★★★★</p>
-          <p class="op-note">推荐理由占位：远程攻击的近卫，精英化后覆盖面很大。</p>
+          <h2 class="op-name">SilverAsh</h2>
+          <p class="op-class">Guard</p>
+          <p class="op-stars" aria-label="6 stars">★★★★★★</p>
+          <p class="op-note">Placeholder note: a guard with ranged attacks; his coverage widens a lot after promotion.</p>
         </div>
       </article>
 
       <article class="op-card">
         <div class="op-avatar" aria-hidden="true"></div>
         <div class="op-body">
-          <h2 class="op-name">艾雅法拉</h2>
-          <p class="op-class">医疗</p>
-          <p class="op-stars" aria-label="六星">★★★★★★</p>
-          <p class="op-note">推荐理由占位：群体伤害高，面对成堆敌人时输出稳定。</p>
+          <h2 class="op-name">Eyjafjalla</h2>
+          <p class="op-class">Medic</p>
+          <p class="op-stars" aria-label="6 stars">★★★★★★</p>
+          <p class="op-note">Placeholder note: high area damage, with steady output against stacked enemies.</p>
         </div>
       </article>
     </section>
 
     <p class="empty" id="empty" hidden>
-      没有找到符合条件的干员。换个名字，或者清除筛选。
-      <button class="clear-btn" id="clear" type="button">清除全部</button>
+      No operators match your filters. Try another name, or clear the filters.
+      <button class="clear-btn" id="clear" type="button">Clear all</button>
     </p>
   </main>
 
   <footer class="site-footer">
     <p class="footer-title">RHODES ISLAND GUIDE</p>
-    <p class="footer-copy">罗德岛导览 · © 2026 版权占位 · 本站为课程练习作品，与游戏官方无关</p>
+    <p class="footer-copy">Rhodes Island Guide · © 2026 placeholder · A coursework project, not affiliated with the game's official site</p>
   </footer>
 
   <script src="js/main.js"></script>
