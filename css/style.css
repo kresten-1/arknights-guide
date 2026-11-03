@@ -233,7 +233,7 @@ main {
   padding: 26px 24px 28px;
   background: linear-gradient(180deg, var(--panel-hi), var(--panel));
   border: 1px solid var(--line);
-  transition: border-color 0.18s, transform 0.18s;
+  transition: border-color 0.18s, transform 0.18s, box-shadow 0.18s;
 }
 
 .card::after {
@@ -247,9 +247,16 @@ main {
   transition: background 0.18s;
 }
 
-.card:hover {
+/* 悬停：轻微上浮 + 放大，配一层阴影强调“浮起来” */
+.card:hover,
+.card:focus-visible {
   border-color: var(--accent);
-  transform: translateY(-2px);
+  transform: translateY(-8px) scale(1.03);
+  box-shadow:
+    0 0 0 1px rgba(245, 217, 10, 0.35),
+    0 0 30px rgba(245, 217, 10, 0.2),
+    0 24px 44px rgba(0, 0, 0, 0.85);
+  z-index: 1;
 }
 
 .card:hover::after {
@@ -286,16 +293,24 @@ main {
 }
 
 .op-card {
+  position: relative;
   display: flex;
   gap: 16px;
   padding: 18px;
   background: var(--panel);
   border: 1px solid var(--line);
-  transition: border-color 0.18s;
+  transition: border-color 0.18s, transform 0.18s, box-shadow 0.18s;
 }
 
+/* 悬停：上浮 + 放大，黄色描边加一层外发光，暗色背景上才看得出“浮起来” */
 .op-card:hover {
-  border-color: var(--line-hi);
+  border-color: var(--accent);
+  transform: translateY(-8px) scale(1.03);
+  box-shadow:
+    0 0 0 1px rgba(245, 217, 10, 0.35),
+    0 0 28px rgba(245, 217, 10, 0.18),
+    0 22px 40px rgba(0, 0, 0, 0.85);
+  z-index: 1;
 }
 
 .op-avatar {
@@ -403,9 +418,22 @@ main {
 }
 
 .stage {
+  position: relative;
   padding: 26px;
   background: var(--panel);
   border: 1px solid var(--line);
+  transition: border-color 0.18s, transform 0.18s, box-shadow 0.18s;
+}
+
+/* 关卡卡片是整行宽，放大幅度比小卡片收敛，避免横向溢出 */
+.stage:hover {
+  border-color: var(--accent);
+  transform: translateY(-6px) scale(1.015);
+  box-shadow:
+    0 0 0 1px rgba(245, 217, 10, 0.3),
+    0 0 30px rgba(245, 217, 10, 0.15),
+    0 24px 44px rgba(0, 0, 0, 0.85);
+  z-index: 1;
 }
 
 .stage-head {
@@ -750,5 +778,32 @@ main {
 
   .op-avatar::after {
     inset: 26px;
+  }
+}
+
+/* --- 动效偏好 ------------------------------------------------------------ */
+
+/* 系统关闭动画时取消过渡（瞬间到位），但保留浮起的最终状态，
+   否则用户完全看不到悬停反馈 */
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .op-card,
+  .stage {
+    transition: none;
+  }
+}
+
+/* 触屏设备没有真正的悬停，避免点击后悬浮态“粘住” */
+@media (hover: none) {
+  .card:hover,
+  .op-card:hover,
+  .stage:hover {
+    transform: none;
+    box-shadow: none;
+    border-color: var(--line);
+  }
+
+  .card:hover::after {
+    background: var(--line);
   }
 }
