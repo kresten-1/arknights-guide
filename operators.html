@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Operators · Rhodes Island Guide</title>
-  <meta name="description" content="Roles, rarity and a one-line recommendation for six commonly used operators.">
+  <meta name="description" content="Roles, base stats and a short combat note for nineteen Arknights operators.">
 
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 
   <meta property="og:title" content="Operators · Rhodes Island Guide">
-  <meta property="og:description" content="Roles, rarity and a one-line recommendation for six commonly used operators.">
+  <meta property="og:description" content="Roles, base stats and a short combat note for nineteen Arknights operators.">
   <meta property="og:image" content="assets/og-image.png">
   <meta property="og:url" content="https://kresten-1.github.io/arknights-guide/operators.html">
   <meta property="og:type" content="website">
@@ -37,7 +37,7 @@
 
   <main>
     <h1 class="page-title">Operators</h1>
-    <p class="lead">Six operators worth raising early, ordered by role and rarity.</p>
+    <p class="lead">Nineteen operators, with class, base stats and a short note on what each one actually does in a fight.</p>
 
     <section class="filter-bar" aria-label="Filter and search">
       <div class="filter-row">
@@ -47,72 +47,356 @@
                 aria-expanded="false" aria-controls="filter-panel">
           Filter<span class="filter-count" id="filter-count"></span>
         </button>
-        <p class="op-count" id="op-count" aria-live="polite">6 operators</p>
+        <p class="op-count" id="op-count" aria-live="polite">19 operators</p>
       </div>
 
-      <div class="filter-panel" id="filter-panel" aria-label="Filter by role"></div>
+      <div class="filter-panel" id="filter-panel" aria-label="Filter by class"></div>
     </section>
 
     <section class="op-grid" aria-label="Operator list">
-      <article class="op-card">
-        <div class="op-avatar" aria-hidden="true"></div>
-        <div class="op-body">
-          <h2 class="op-name">Amiya</h2>
-          <p class="op-class">Caster</p>
-          <p class="op-stars" aria-label="5 stars">★★★★★</p>
-          <p class="op-note">Placeholder note: arts damage you can use from the very first stage — worth raising early.</p>
-        </div>
-      </article>
 
-      <article class="op-card">
+      <article class="op-card" data-class="Sniper">
         <div class="op-avatar" aria-hidden="true"></div>
         <div class="op-body">
-          <h2 class="op-name">Exusiai</h2>
-          <p class="op-class">Sniper</p>
-          <p class="op-stars" aria-label="5 stars">★★★★★</p>
-          <p class="op-note">Placeholder note: a steady anti-ground attack speed that makes short work of enemy waves.</p>
-        </div>
-      </article>
-
-      <article class="op-card">
-        <div class="op-avatar" aria-hidden="true"></div>
-        <div class="op-body">
-          <h2 class="op-name">Siege</h2>
-          <p class="op-class">Vanguard</p>
+          <h2 class="op-name">能天使<span class="op-en">Exusiai</span></h2>
+          <p class="op-class">Sniper · Marksman</p>
           <p class="op-stars" aria-label="6 stars">★★★★★★</p>
-          <p class="op-note">Placeholder note: frontline blocking plus damage, with a very comfortable DP refund.</p>
+          <dl class="op-stats">
+            <div><dt>HP</dt><dd>1673</dd></div>
+            <div><dt>ATK</dt><dd>540</dd></div>
+            <div><dt>DEF</dt><dd>161</dd></div>
+            <div><dt>RES</dt><dd>0</dd></div>
+            <div><dt>Cost</dt><dd>12→14</dd></div>
+            <div><dt>Block</dt><dd>1</dd></div>
+          </dl>
+          <p class="op-note">Short attack interval that hits drones first. All three skills are about firing more shots per attack, and Overload Mode triggers itself, so she keeps the damage up without babysitting.</p>
         </div>
       </article>
 
-      <article class="op-card">
+      <article class="op-card" data-class="Caster">
         <div class="op-avatar" aria-hidden="true"></div>
         <div class="op-body">
-          <h2 class="op-name">Shining</h2>
-          <p class="op-class">Medic</p>
-          <p class="op-stars" aria-label="5 stars">★★★★★</p>
-          <p class="op-note">Placeholder note: reliable single-target healing, best on the lane under the most pressure.</p>
-        </div>
-      </article>
-
-      <article class="op-card">
-        <div class="op-avatar" aria-hidden="true"></div>
-        <div class="op-body">
-          <h2 class="op-name">SilverAsh</h2>
-          <p class="op-class">Guard</p>
+          <h2 class="op-name">艾雅法拉<span class="op-en">Eyjafjalla</span></h2>
+          <p class="op-class">Caster · Core Caster</p>
           <p class="op-stars" aria-label="6 stars">★★★★★★</p>
-          <p class="op-note">Placeholder note: a guard with ranged attacks; his coverage widens a lot after promotion.</p>
+          <dl class="op-stats">
+            <div><dt>HP</dt><dd>1743</dd></div>
+            <div><dt>ATK</dt><dd>645</dd></div>
+            <div><dt>DEF</dt><dd>122</dd></div>
+            <div><dt>RES</dt><dd>20</dd></div>
+            <div><dt>Cost</dt><dd>21</dd></div>
+            <div><dt>Block</dt><dd>1</dd></div>
+          </dl>
+          <p class="op-note">Enough RES to sit mid-line. Ignition charges up and strips enemy RES, while Volcano is the big area burst that ends a wave.</p>
         </div>
       </article>
 
-      <article class="op-card">
+      <article class="op-card" data-class="Medic">
         <div class="op-avatar" aria-hidden="true"></div>
         <div class="op-body">
-          <h2 class="op-name">Eyjafjalla</h2>
-          <p class="op-class">Caster</p>
+          <h2 class="op-name">闪灵<span class="op-en">Shining</span></h2>
+          <p class="op-class">Medic · Healer</p>
           <p class="op-stars" aria-label="6 stars">★★★★★★</p>
-          <p class="op-note">Placeholder note: high area damage, with steady output against stacked enemies.</p>
+          <dl class="op-stats">
+            <div><dt>HP</dt><dd>1613</dd></div>
+            <div><dt>ATK</dt><dd>530</dd></div>
+            <div><dt>DEF</dt><dd>138</dd></div>
+            <div><dt>RES</dt><dd>0</dd></div>
+            <div><dt>Cost</dt><dd>20</dd></div>
+            <div><dt>Block</dt><dd>1</dd></div>
+          </dl>
+          <p class="op-note">A healer whose kit leans defensive. Doctrine Field raises the DEF of every ally in range, which is the answer when physical pressure is what keeps killing your front line.</p>
         </div>
       </article>
+
+      <article class="op-card" data-class="Medic">
+        <div class="op-avatar" aria-hidden="true"></div>
+        <div class="op-body">
+          <h2 class="op-name">夜莺<span class="op-en">Nightingale</span></h2>
+          <p class="op-class">Medic · Multi-target</p>
+          <p class="op-stars" aria-label="6 stars">★★★★★★</p>
+          <dl class="op-stats">
+            <div><dt>HP</dt><dd>1705</dd></div>
+            <div><dt>ATK</dt><dd>350</dd></div>
+            <div><dt>DEF</dt><dd>169</dd></div>
+            <div><dt>RES</dt><dd>5</dd></div>
+            <div><dt>Cost</dt><dd>16→18</dd></div>
+            <div><dt>Block</dt><dd>1</dd></div>
+          </dl>
+          <p class="op-note">Heals three allies at once. Sanctuary adds wide-area RES and arts dodge on top, which is why she is the standard counter to arts-heavy stages.</p>
+        </div>
+      </article>
+
+      <article class="op-card" data-class="Defender">
+        <div class="op-avatar" aria-hidden="true"></div>
+        <div class="op-body">
+          <h2 class="op-name">星熊<span class="op-en">Hoshiguma</span></h2>
+          <p class="op-class">Defender · Protector</p>
+          <p class="op-stars" aria-label="6 stars">★★★★★★</p>
+          <dl class="op-stats">
+            <div><dt>HP</dt><dd>3850</dd></div>
+            <div><dt>ATK</dt><dd>430</dd></div>
+            <div><dt>DEF</dt><dd>723</dd></div>
+            <div><dt>RES</dt><dd>0</dd></div>
+            <div><dt>Cost</dt><dd>23</dd></div>
+            <div><dt>Block</dt><dd>3</dd></div>
+          </dl>
+          <p class="op-note">The highest DEF in the roster. Thorns returns damage to whoever hits her and Saw of Strength cuts a whole row, so she holds the line and chips back at the same time.</p>
+        </div>
+      </article>
+
+      <article class="op-card" data-class="Defender">
+        <div class="op-avatar" aria-hidden="true"></div>
+        <div class="op-body">
+          <h2 class="op-name">塞雷娅<span class="op-en">Saria</span></h2>
+          <p class="op-class">Defender · Guardian</p>
+          <p class="op-stars" aria-label="6 stars">★★★★★★</p>
+          <dl class="op-stats">
+            <div><dt>HP</dt><dd>3150</dd></div>
+            <div><dt>ATK</dt><dd>485</dd></div>
+            <div><dt>DEF</dt><dd>595</dd></div>
+            <div><dt>RES</dt><dd>10</dd></div>
+            <div><dt>Cost</dt><dd>22</dd></div>
+            <div><dt>Block</dt><dd>3</dd></div>
+          </dl>
+          <p class="op-note">A defender that heals. Calcification keeps the team topped up while making enemies take more arts damage and move slower, so she is the pivot a push is built around.</p>
+        </div>
+      </article>
+
+      <article class="op-card" data-class="Guard">
+        <div class="op-avatar" aria-hidden="true"></div>
+        <div class="op-body">
+          <h2 class="op-name">银灰<span class="op-en">SilverAsh</span></h2>
+          <p class="op-class">Guard · Lord</p>
+          <p class="op-stars" aria-label="6 stars">★★★★★★</p>
+          <dl class="op-stats">
+            <div><dt>HP</dt><dd>2560</dd></div>
+            <div><dt>ATK</dt><dd>713</dd></div>
+            <div><dt>DEF</dt><dd>397</dd></div>
+            <div><dt>RES</dt><dd>10</dd></div>
+            <div><dt>Cost</dt><dd>20</dd></div>
+            <div><dt>Block</dt><dd>2</dd></div>
+          </dl>
+          <p class="op-note">Attacks at range with reduced damage. True Silver Slash trades defence for enormous attack and hits several targets at once, the classic answer to a wave you cannot hold.</p>
+        </div>
+      </article>
+
+      <article class="op-card" data-class="Guard">
+        <div class="op-avatar" aria-hidden="true"></div>
+        <div class="op-body">
+          <h2 class="op-name">煌<span class="op-en">Blaze</span></h2>
+          <p class="op-class">Guard · Centurion</p>
+          <p class="op-stars" aria-label="6 stars">★★★★★★</p>
+          <dl class="op-stats">
+            <div><dt>HP</dt><dd>2821</dd></div>
+            <div><dt>ATK</dt><dd>765</dd></div>
+            <div><dt>DEF</dt><dd>370</dd></div>
+            <div><dt>RES</dt><dd>0</dd></div>
+            <div><dt>Cost</dt><dd>24</dd></div>
+            <div><dt>Block</dt><dd>3</dd></div>
+          </dl>
+          <p class="op-note">Hits every enemy she blocks at once. Chainsaw Module is permanent once switched on, and Boiling Burst closes with one wide high-damage cut at the cost of her own HP.</p>
+        </div>
+      </article>
+
+      <article class="op-card" data-class="Vanguard">
+        <div class="op-avatar" aria-hidden="true"></div>
+        <div class="op-body">
+          <h2 class="op-name">风笛<span class="op-en">Bagpipe</span></h2>
+          <p class="op-class">Vanguard · Charger</p>
+          <p class="op-stars" aria-label="6 stars">★★★★★★</p>
+          <dl class="op-stats">
+            <div><dt>HP</dt><dd>2484</dd></div>
+            <div><dt>ATK</dt><dd>586</dd></div>
+            <div><dt>DEF</dt><dd>382</dd></div>
+            <div><dt>RES</dt><dd>0</dd></div>
+            <div><dt>Cost</dt><dd>13</dd></div>
+            <div><dt>Block</dt><dd>1</dd></div>
+          </dl>
+          <p class="op-note">Refunds DP on kill and on retreat, so she is never a wasted slot. Closed Chamber Burst adds block count and raw stats, which is why she fights like a guard.</p>
+        </div>
+      </article>
+
+      <article class="op-card" data-class="Supporter">
+        <div class="op-avatar" aria-hidden="true"></div>
+        <div class="op-body">
+          <h2 class="op-name">铃兰<span class="op-en">Suzuran</span></h2>
+          <p class="op-class">Supporter · Decel Binder</p>
+          <p class="op-stars" aria-label="6 stars">★★★★★★</p>
+          <dl class="op-stats">
+            <div><dt>HP</dt><dd>1480</dd></div>
+            <div><dt>ATK</dt><dd>521</dd></div>
+            <div><dt>DEF</dt><dd>128</dd></div>
+            <div><dt>RES</dt><dd>25</dd></div>
+            <div><dt>Cost</dt><dd>16</dd></div>
+            <div><dt>Block</dt><dd>1</dd></div>
+          </dl>
+          <p class="op-note">Every basic attack slows. Foxfire Haze stops her attacking entirely and turns her into pure control, which buys the rest of the squad the seconds they need.</p>
+        </div>
+      </article>
+
+      <article class="op-card" data-class="Guard">
+        <div class="op-avatar" aria-hidden="true"></div>
+        <div class="op-body">
+          <h2 class="op-name">棘刺<span class="op-en">Thorns</span></h2>
+          <p class="op-class">Guard · Lord</p>
+          <p class="op-stars" aria-label="6 stars">★★★★★★</p>
+          <dl class="op-stats">
+            <div><dt>HP</dt><dd>2612</dd></div>
+            <div><dt>ATK</dt><dd>711</dd></div>
+            <div><dt>DEF</dt><dd>402</dd></div>
+            <div><dt>RES</dt><dd>10</dd></div>
+            <div><dt>Cost</dt><dd>18→20</dd></div>
+            <div><dt>Block</dt><dd>2</dd></div>
+          </dl>
+          <p class="op-note">Poison on hit, plus regeneration whenever he stops attacking. High Ground Art removes the ranged penalty, and on reuse the buff doubles and never expires — he gets stronger the longer the stage runs.</p>
+        </div>
+      </article>
+
+      <article class="op-card" data-class="Guard">
+        <div class="op-avatar" aria-hidden="true"></div>
+        <div class="op-body">
+          <h2 class="op-name">史尔特尔<span class="op-en">Surtr</span></h2>
+          <p class="op-class">Guard · Arts Fighter</p>
+          <p class="op-stars" aria-label="6 stars">★★★★★★</p>
+          <dl class="op-stats">
+            <div><dt>HP</dt><dd>2916</dd></div>
+            <div><dt>ATK</dt><dd>672</dd></div>
+            <div><dt>DEF</dt><dd>414</dd></div>
+            <div><dt>RES</dt><dd>15</dd></div>
+            <div><dt>Cost</dt><dd>19→21</dd></div>
+            <div><dt>Block</dt><dd>1</dd></div>
+          </dl>
+          <p class="op-note">Every hit is arts damage, and Ignore RES makes armoured units melt. Twilight restores full HP, then hands her huge attack and range while draining her life — a one-shot burst you commit to.</p>
+        </div>
+      </article>
+
+      <article class="op-card" data-class="Defender">
+        <div class="op-avatar" aria-hidden="true"></div>
+        <div class="op-body">
+          <h2 class="op-name">泥岩<span class="op-en">Mudrock</span></h2>
+          <p class="op-class">Defender · Juggernaut</p>
+          <p class="op-stars" aria-label="6 stars">★★★★★★</p>
+          <dl class="op-stats">
+            <div><dt>HP</dt><dd>3928</dd></div>
+            <div><dt>ATK</dt><dd>882</dd></div>
+            <div><dt>DEF</dt><dd>602</dd></div>
+            <div><dt>RES</dt><dd>10</dd></div>
+            <div><dt>Cost</dt><dd>36</dd></div>
+            <div><dt>Block</dt><dd>3</dd></div>
+          </dl>
+          <p class="op-note">Cannot be healed by allies, so she runs on her own shields instead. Bloodline of the Soil opens with a few seconds of invulnerability, then stuns and shreds everything around her.</p>
+        </div>
+      </article>
+
+      <article class="op-card" data-class="Guard">
+        <div class="op-avatar" aria-hidden="true"></div>
+        <div class="op-body">
+          <h2 class="op-name">山<span class="op-en">Mountain</span></h2>
+          <p class="op-class">Guard · Fighter</p>
+          <p class="op-stars" aria-label="6 stars">★★★★★★</p>
+          <dl class="op-stats">
+            <div><dt>HP</dt><dd>2745</dd></div>
+            <div><dt>ATK</dt><dd>587</dd></div>
+            <div><dt>DEF</dt><dd>357</dd></div>
+            <div><dt>RES</dt><dd>0</dd></div>
+            <div><dt>Cost</dt><dd>11</dd></div>
+            <div><dt>Block</dt><dd>1</dd></div>
+          </dl>
+          <p class="op-note">Cheap to deploy and fast to swing. Sweeping Stance trades defence for attack and an extra block with constant healing, and Earthshaker simply shoves the crowd away.</p>
+        </div>
+      </article>
+
+      <article class="op-card" data-class="Medic">
+        <div class="op-avatar" aria-hidden="true"></div>
+        <div class="op-body">
+          <h2 class="op-name">凯尔希<span class="op-en">Kal'tsit</span></h2>
+          <p class="op-class">Medic · Healer</p>
+          <p class="op-stars" aria-label="6 stars">★★★★★★</p>
+          <dl class="op-stats">
+            <div><dt>HP</dt><dd>1633</dd></div>
+            <div><dt>ATK</dt><dd>490</dd></div>
+            <div><dt>DEF</dt><dd>215</dd></div>
+            <div><dt>RES</dt><dd>0</dd></div>
+            <div><dt>Cost</dt><dd>20</dd></div>
+            <div><dt>Block</dt><dd>1</dd></div>
+          </dl>
+          <p class="op-note">Fights through Mon3tr, a summon that redeploys on its own timer. Command: Meltdown turns that summon's attacks into true damage, so she covers both the healing and the kill.</p>
+        </div>
+      </article>
+
+      <article class="op-card" data-class="Caster">
+        <div class="op-avatar" aria-hidden="true"></div>
+        <div class="op-body">
+          <h2 class="op-name">澄闪<span class="op-en">Goldenglow</span></h2>
+          <p class="op-class">Caster · Mech-accord</p>
+          <p class="op-stars" aria-label="6 stars">★★★★★★</p>
+          <dl class="op-stats">
+            <div><dt>HP</dt><dd>1480</dd></div>
+            <div><dt>ATK</dt><dd>331</dd></div>
+            <div><dt>DEF</dt><dd>125</dd></div>
+            <div><dt>RES</dt><dd>20</dd></div>
+            <div><dt>Cost</dt><dd>22</dd></div>
+            <div><dt>Block</dt><dd>1</dd></div>
+          </dl>
+          <p class="op-note">Damages through floating drones rather than her own attack. Current Surge adds a drone and extends range permanently, while Brilliant Glow reaches the whole map and pins enemies in place.</p>
+        </div>
+      </article>
+
+      <article class="op-card" data-class="Defender">
+        <div class="op-avatar" aria-hidden="true"></div>
+        <div class="op-body">
+          <h2 class="op-name">号角<span class="op-en">Horn</span></h2>
+          <p class="op-class">Defender · Fortress</p>
+          <p class="op-stars" aria-label="6 stars">★★★★★★</p>
+          <dl class="op-stats">
+            <div><dt>HP</dt><dd>3067</dd></div>
+            <div><dt>ATK</dt><dd>936</dd></div>
+            <div><dt>DEF</dt><dd>620</dd></div>
+            <div><dt>RES</dt><dd>0</dd></div>
+            <div><dt>Cost</dt><dd>28</dd></div>
+            <div><dt>Block</dt><dd>3</dd></div>
+          </dl>
+          <p class="op-note">Shells at range whenever she is not blocking, so placement matters more than usual. Ultimate Line pushes her rate of fire up, and overloading trades her HP for even more output.</p>
+        </div>
+      </article>
+
+      <article class="op-card" data-class="Medic">
+        <div class="op-avatar" aria-hidden="true"></div>
+        <div class="op-body">
+          <h2 class="op-name">流明<span class="op-en">Lumen</span></h2>
+          <p class="op-class">Medic · Therapist</p>
+          <p class="op-stars" aria-label="6 stars">★★★★★★</p>
+          <dl class="op-stats">
+            <div><dt>HP</dt><dd>1825</dd></div>
+            <div><dt>ATK</dt><dd>540</dd></div>
+            <div><dt>DEF</dt><dd>111</dd></div>
+            <div><dt>RES</dt><dd>10</dd></div>
+            <div><dt>Cost</dt><dd>23</dd></div>
+            <div><dt>Block</dt><dd>1</dd></div>
+          </dl>
+          <p class="op-note">Wide heal range with resistance built into every heal. Lamp Unto Eternity spends ammo to clear abnormal status from allies, which is what makes control-heavy stages survivable.</p>
+        </div>
+      </article>
+
+      <article class="op-card" data-class="Defender">
+        <div class="op-avatar" aria-hidden="true"></div>
+        <div class="op-body">
+          <h2 class="op-name">机械师<span class="op-en">Mechanist</span></h2>
+          <p class="op-class">Defender · Sentinel</p>
+          <p class="op-stars" aria-label="6 stars">★★★★★★</p>
+          <dl class="op-stats">
+            <div><dt>HP</dt><dd>3631</dd></div>
+            <div><dt>ATK</dt><dd>513</dd></div>
+            <div><dt>DEF</dt><dd>705</dd></div>
+            <div><dt>RES</dt><dd>0</dd></div>
+            <div><dt>Cost</dt><dd>23</dd></div>
+            <div><dt>Block</dt><dd>3</dd></div>
+          </dl>
+          <p class="op-note">Blocks three and shoots back, with a summon in front of him. Engineering Cross turns him into a cross-shaped arts nuke while the summon charges forward to break the line.</p>
+        </div>
+      </article>
+
     </section>
 
     <p class="empty" id="empty" hidden>

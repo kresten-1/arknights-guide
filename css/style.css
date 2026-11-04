@@ -339,6 +339,16 @@ main {
   letter-spacing: 0.04em;
 }
 
+.op-en {
+  display: block;
+  margin-top: 3px;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
 .op-class {
   display: inline-block;
   margin: 0 0 6px;
@@ -347,6 +357,37 @@ main {
   color: var(--text);
   background: #22262e;
   border: 1px solid var(--line-hi);
+}
+
+/* 基础属性：两列键值对，数字用等宽对齐 */
+.op-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px 14px;
+  margin: 10px 0;
+  padding: 10px 0 0;
+  border-top: 1px solid var(--line);
+}
+
+.op-stats > div {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.op-stats dt {
+  font-size: 10.5px;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.op-stats dd {
+  margin: 0;
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
 }
 
 .op-stars {

@@ -18,10 +18,19 @@
   var query = '';      // search term, lowercased
   var selected = [];   // selected classes
 
-  // 1 · Classes come from the cards themselves, de-duplicated in first-seen order
+  // 1 · Classes come from each card's data-class, de-duplicated in first-seen order
+  function classOf(card) {
+    var v = card.getAttribute('data-class');
+    if (!v) {
+      var el = card.querySelector('.op-class');
+      v = el ? el.textContent.split('·')[0] : '';
+    }
+    return v.trim();
+  }
+
   var jobs = [];
   cards.forEach(function (card) {
-    var job = card.querySelector('.op-class').textContent.trim();
+    var job = classOf(card);
     if (job && jobs.indexOf(job) === -1) jobs.push(job);
   });
 
@@ -60,7 +69,7 @@
 
     cards.forEach(function (card) {
       var name = card.querySelector('.op-name').textContent.toLowerCase();
-      var job = card.querySelector('.op-class').textContent.trim();
+      var job = classOf(card);
       var okName = name.indexOf(query) !== -1;
       var okJob = selected.length === 0 || selected.indexOf(job) !== -1;
       var ok = okName && okJob;
