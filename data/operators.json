@@ -1,6 +1,6 @@
 {
   "source": "https://prts.wiki",
-  "note": "战斗相关数据。stats 取精英2满级、不含信赖与潜能加成。talents 仅含天赋本体，不含模组追加效果。skills 的 spCost/initialSp/duration 为专精三参考值，description 为不含倍率的通用描述。",
+  "note": "战斗相关数据。stats 取精英2满级、不含信赖与潜能加成。talents 仅含天赋本体，不含模组追加效果。skills 的 spCost/initialSp/duration 为专精三参考值；description 保留原始技能描述的结构，仅将具体倍率改为定性表述。",
   "fetchedAt": "2026-11-04",
   "count": 19,
   "operators": [
@@ -51,7 +51,7 @@
           "spCost": 4,
           "initialSp": 0,
           "duration": null,
-          "description": "下次攻击变为多段连射，单次伤害不高但总输出稳定。"
+          "description": "下次攻击变为3连射，每段伤害低于普通攻击，但整体输出更高。"
         },
         {
           "name": "扫射模式",
@@ -71,7 +71,7 @@
           "spCost": 30,
           "initialSp": 20,
           "duration": 15,
-          "description": "攻击段数进一步增加、攻击间隔缩短，且可自动触发，是主要的输出手段。"
+          "description": "攻击段数进一步增加，攻击间隔缩短，攻击力提升，技能会自动开启。"
         }
       ],
       "modules": [
@@ -196,7 +196,7 @@
           "spCost": 35,
           "initialSp": 25,
           "duration": 25,
-          "description": "大幅提升攻击速度，重复使用时额外提升攻击力。"
+          "description": "攻击速度大幅提升；第二次及以后使用时，额外追加攻击力提升的效果。"
         },
         {
           "name": "点燃",
@@ -206,7 +206,7 @@
           "spCost": 5,
           "initialSp": 0,
           "duration": null,
-          "description": "强化下一次攻击并造成范围爆炸，同时降低目标的法术抗性，可充能多次。"
+          "description": "下次攻击造成高额法术伤害，命中目标周围的敌人受到一半的爆炸伤害，并在数秒内降低其法术抗性；可充能多次。"
         },
         {
           "name": "火山",
@@ -216,7 +216,7 @@
           "spCost": 80,
           "initialSp": 55,
           "duration": 15,
-          "description": "大幅提升攻击力、扩大攻击范围并缩短攻击间隔，可同时打击多个敌人。"
+          "description": "攻击力大幅提升，攻击范围增大，攻击间隔大幅度缩短，攻击变为随机对攻击范围内至多6个敌人发射熔岩。"
         }
       ],
       "modules": [
@@ -346,7 +346,7 @@
           "spCost": 40,
           "initialSp": 20,
           "duration": 20,
-          "description": "同时提升治疗量与治疗速度。"
+          "description": "攻击力提升，攻击速度提升。"
         },
         {
           "name": "自动掩护",
@@ -356,7 +356,7 @@
           "spCost": 5,
           "initialSp": 0,
           "duration": 3,
-          "description": "为治疗目标附加屏障并提升其防御力，可充能多次。"
+          "description": "下次治疗使目标获得屏障，屏障可吸收相当于闪灵攻击力一部分的伤害，同时提升目标防御力；可充能多次。"
         },
         {
           "name": "教条力场",
@@ -366,7 +366,7 @@
           "spCost": 120,
           "initialSp": 115,
           "duration": 60,
-          "description": "大幅提升攻击范围内所有友方单位的防御力。"
+          "description": "攻击力提升，攻击范围内的所有友方单位防御力大幅提升。"
         }
       ],
       "modules": [
@@ -493,7 +493,7 @@
           "spCost": 30,
           "initialSp": 20,
           "duration": 30,
-          "description": "单纯提升单次治疗量。"
+          "description": "攻击力提升。"
         },
         {
           "name": "法术护盾",
@@ -503,7 +503,7 @@
           "spCost": 8,
           "initialSp": 0,
           "duration": 5,
-          "description": "为所有治疗目标附加法术屏障，并提升其法术抗性。"
+          "description": "下次治疗使所有目标获得屏障，屏障能吸收法术伤害，同时提升目标法术抗性；可充能多次。"
         },
         {
           "name": "圣域",
@@ -513,7 +513,7 @@
           "spCost": 120,
           "initialSp": 115,
           "duration": 60,
-          "description": "扩大治疗范围，大幅提升范围内友方单位的法术抗性与法术闪避。"
+          "description": "攻击范围扩大，攻击力提升，攻击范围内的友方单位法术抗性大幅提升，并获得法术闪避。"
         }
       ],
       "modules": [
@@ -635,7 +635,7 @@
           "spCost": 40,
           "initialSp": 20,
           "duration": 30,
-          "description": "同时提升防御力与攻击力。"
+          "description": "防御力提升，攻击力提升。"
         },
         {
           "name": "荆棘",
@@ -645,7 +645,7 @@
           "spCost": 0,
           "initialSp": 0,
           "duration": null,
-          "description": "提升防御力，并把受到的普通攻击反弹给攻击者。"
+          "description": "防御力提升；每次受到攻击时对目标造成相当于星熊攻击力一定比例的物理伤害。"
         },
         {
           "name": "力之锯",
@@ -655,7 +655,7 @@
           "spCost": 50,
           "initialSp": 30,
           "duration": 25,
-          "description": "大幅提升攻防，并对前方一格范围内造成持续物理伤害。"
+          "description": "攻击力大幅提升，防御力大幅提升，对前方一格的所有敌人使用盾牌进行切割。"
         }
       ],
       "modules": [
@@ -784,7 +784,7 @@
           "spCost": 4,
           "initialSp": 0,
           "duration": null,
-          "description": "强化下一次治疗，优先救治血量较低的友方单位，可充能多次。"
+          "description": "下一次攻击会为周围血量较低的一名友方单位恢复生命，可充能多次。"
         },
         {
           "name": "药物配置",
@@ -794,7 +794,7 @@
           "spCost": 7,
           "initialSp": 0,
           "duration": null,
-          "description": "同时治疗周围一定范围内的所有友军。"
+          "description": "治疗附近一定范围内的所有友军。"
         },
         {
           "name": "钙质化",
@@ -804,7 +804,7 @@
           "spCost": 80,
           "initialSp": 70,
           "duration": 30,
-          "description": "持续治疗周围友军，同时让敌人受到的法术伤害提高并大幅减速。"
+          "description": "附近所有友军每秒回复生命；附近所有敌军受到的法术伤害提升，移动速度大幅降低。"
         }
       ],
       "modules": [
@@ -926,7 +926,7 @@
           "spCost": 2,
           "initialSp": 0,
           "duration": null,
-          "description": "强化下一次攻击。"
+          "description": "下次攻击的攻击力提高。"
         },
         {
           "name": "雪境生存法则",
@@ -936,7 +936,7 @@
           "spCost": 5,
           "initialSp": 0,
           "duration": null,
-          "description": "切换为防御姿态，牺牲攻击范围换取极高防御与持续回血。"
+          "description": "可以在下列状态和初始状态间切换：攻击范围缩小，防御力大幅提升，每秒恢复一定比例的最大生命。"
         },
         {
           "name": "真银斩",
@@ -946,7 +946,7 @@
           "spCost": 90,
           "initialSp": 75,
           "duration": 30,
-          "description": "牺牲防御换取极高攻击力，扩大范围并同时攻击多个敌人，是核心爆发技能。"
+          "description": "防御力大幅降低，攻击力大幅提升，攻击范围扩大，同时攻击至多多个目标（视为近距离攻击）。"
         }
       ],
       "modules": [
@@ -1036,7 +1036,7 @@
           "spCost": 2,
           "initialSp": 0,
           "duration": null,
-          "description": "强化下一次攻击。"
+          "description": "下次攻击的攻击力提高。"
         },
         {
           "name": "链锯延伸模块",
@@ -1046,7 +1046,7 @@
           "spCost": 70,
           "initialSp": 0,
           "duration": "无限",
-          "description": "永久提升攻防并延长攻击距离，无需反复开启。"
+          "description": "攻击力提升，防御力提升，攻击距离加长；持续时间无限。"
         },
         {
           "name": "沸腾爆裂",
@@ -1056,7 +1056,7 @@
           "spCost": 35,
           "initialSp": 25,
           "duration": 10,
-          "description": "持续提升攻防，结束时造成一次大范围高额伤害，但会损失自身生命。"
+          "description": "攻击力和防御力逐渐提升，对前方一格敌方单位进行切割；结束时对附近所有敌人造成此时攻击力数倍的物理伤害，自身流失一定比例生命值。"
         }
       ],
       "modules": [
@@ -1181,7 +1181,7 @@
           "spCost": 35,
           "initialSp": 15,
           "duration": 35,
-          "description": "同时提升攻击力与攻击速度。"
+          "description": "攻击力提升，攻击速度提升。"
         },
         {
           "name": "高效冲击",
@@ -1191,7 +1191,7 @@
           "spCost": 4,
           "initialSp": 0,
           "duration": null,
-          "description": "强化下一次攻击并额外攻击一个目标，可充能多次。"
+          "description": "下一次的攻击力提升，且额外攻击一次；可充能多次。"
         },
         {
           "name": "闭膛连发",
@@ -1201,7 +1201,7 @@
           "spCost": 40,
           "initialSp": 25,
           "duration": 20,
-          "description": "大幅提升攻防与阻挡数，攻击变为多段连击，适合正面强攻。"
+          "description": "攻击间隔增大，阻挡数+1，攻击力和防御力大幅提升，攻击变为三连击。"
         }
       ],
       "modules": [
@@ -1321,7 +1321,7 @@
           "spCost": 20,
           "initialSp": 0,
           "duration": 30,
-          "description": "提升攻击力与攻击速度，自动触发。"
+          "description": "攻击力提升，攻击速度提升；技能自动开启。"
         },
         {
           "name": "儿时的舞乐",
@@ -1331,7 +1331,7 @@
           "spCost": 80,
           "initialSp": 0,
           "duration": "无限",
-          "description": "提升攻击力并同时攻击多个目标，持续时间无限。"
+          "description": "攻击力提升，可以同时攻击多个敌方单位；持续时间无限。"
         },
         {
           "name": "狐火渺然",
@@ -1341,7 +1341,7 @@
           "spCost": 70,
           "initialSp": 50,
           "duration": 35,
-          "description": "停止攻击转为控场，扩大范围并使敌人持续停顿，同时为范围内友军回复生命。"
+          "description": "停止攻击，攻击范围扩大，第二天赋效果翻倍，范围内所有敌人被停顿，同时每秒回复范围内友方相当于一定攻击力的生命。"
         }
       ],
       "modules": [
@@ -1466,7 +1466,7 @@
           "spCost": 30,
           "initialSp": 15,
           "duration": 30,
-          "description": "单纯提升攻击力。"
+          "description": "攻击力提升。"
         },
         {
           "name": "护身尖刺",
@@ -1476,7 +1476,7 @@
           "spCost": 25,
           "initialSp": 10,
           "duration": 40,
-          "description": "转为防御反击姿态，受击时对前方敌人释放尖刺。"
+          "description": "停止攻击，攻击力提升，防御力大幅提升，受到敌人普通攻击时释放尖刺对前方多名敌人进行一次远程攻击（有触发间隔）。"
         },
         {
           "name": "至高之术",
@@ -1486,7 +1486,7 @@
           "spCost": 15,
           "initialSp": 0,
           "duration": 30,
-          "description": "扩大攻击范围并解除远程攻击的伤害衰减，重复使用后效果翻倍且永久持续。"
+          "description": "攻击范围扩大，攻击力提升，攻击速度提升，远程攻击不再降低攻击力；第二次及以后使用时能力加成翻倍，且持续时间无限。"
         }
       ],
       "modules": [
@@ -1615,7 +1615,7 @@
           "spCost": 2,
           "initialSp": 0,
           "duration": null,
-          "description": "强化下一次攻击，若击杀目标则立即回满技力。"
+          "description": "下次攻击的攻击力大幅提升，如果将目标击倒则立即恢复所有技力。"
         },
         {
           "name": "熔核巨影",
@@ -1625,7 +1625,7 @@
           "spCost": 18,
           "initialSp": 12,
           "duration": 18,
-          "description": "提升攻击力与攻击距离，可同时攻击两个目标。"
+          "description": "攻击力提升，攻击距离+1，攻击目标数+1；仅攻击到一个敌人时，对其攻击力额外提升。"
         },
         {
           "name": "黄昏",
@@ -1635,7 +1635,7 @@
           "spCost": 5,
           "initialSp": 0,
           "duration": "无限",
-          "description": "立即回满生命并极大提升攻击力与攻击范围，同时提高生命上限，代价是持续流失生命。"
+          "description": "立即恢复所有生命；攻击力大幅提升，攻击距离+2，攻击目标数+3，生命上限提升，逐渐失去生命；持续时间无限。"
         }
       ],
       "modules": [
@@ -1761,7 +1761,7 @@
           "spCost": 30,
           "initialSp": 15,
           "duration": 40,
-          "description": "单纯提升防御力。"
+          "description": "防御力提升。"
         },
         {
           "name": "岩崩锤",
@@ -1771,7 +1771,7 @@
           "spCost": 4,
           "initialSp": 0,
           "duration": null,
-          "description": "强化攻击的同时回复自身生命，并对周围敌人造成伤害与几率晕眩。"
+          "description": "下次攻击时回复自身一定比例的最大生命，对周围所有地面敌人造成相当于攻击力的物理伤害，并有一定几率晕眩。"
         },
         {
           "name": "秽壤的血脉",
@@ -1781,7 +1781,7 @@
           "spCost": 25,
           "initialSp": 15,
           "duration": 30,
-          "description": "短暂无法行动且免受伤害，结束后晕眩并减速周围敌人，同时大幅提升攻防并攻击所有被阻挡的敌人。"
+          "description": "开启后无法行动且不受到伤害数秒，使周围敌人移动速度降低；状态结束后晕眩周围地面敌人，攻击间隔缩短，攻击力提升，防御力提升，攻击阻挡的所有敌人。"
         }
       ],
       "modules": [
@@ -1901,7 +1901,7 @@
           "spCost": 3,
           "initialSp": 0,
           "duration": null,
-          "description": "强化下一次攻击并额外攻击一个目标。"
+          "description": "下次攻击的攻击力提升，额外攻击一个目标。"
         },
         {
           "name": "横扫架势",
@@ -1911,7 +1911,7 @@
           "spCost": 5,
           "initialSp": 0,
           "duration": null,
-          "description": "切换为近身缠斗姿态，牺牲防御换取攻击力与阻挡数，并持续回复生命。"
+          "description": "可以在下列状态和初始状态间切换：防御力降低，攻击距离缩短，攻击力提升，阻挡数+1，同时攻击阻挡的所有敌人，每秒恢复一定比例的最大生命。"
         },
         {
           "name": "震地碎岩击",
@@ -1921,7 +1921,7 @@
           "spCost": 40,
           "initialSp": 25,
           "duration": 30,
-          "description": "攻击变为强力连击，大幅提升天赋触发几率，并把周围敌人推开。"
+          "description": "攻击间隔增大，攻击力提升，攻击变为2连击，第一天赋的发动几率大幅提升，每次攻击周围多名敌人并将其中等力度地推动。"
         }
       ],
       "modules": [
@@ -2054,7 +2054,7 @@
           "spCost": 20,
           "initialSp": 10,
           "duration": 40,
-          "description": "同时强化自身与召唤物的防御，并获得物理格挡。"
+          "description": "自身和Mon3tr的防御力大幅提升，且自身获得物理格挡。"
         },
         {
           "name": "指令：战术协同",
@@ -2064,7 +2064,7 @@
           "spCost": 8,
           "initialSp": 0,
           "duration": 20,
-          "description": "大幅提升自身攻击速度与召唤物的攻击力。"
+          "description": "自身的攻击速度提升，Mon3tr的攻击力提升，Mon3tr可以攻击阻挡的所有敌人；Mon3tr不在场时技能强制结束。"
         },
         {
           "name": "指令：熔毁",
@@ -2074,7 +2074,7 @@
           "spCost": 15,
           "initialSp": 0,
           "duration": 20,
-          "description": "大幅提升召唤物的攻击与防御，并使其攻击转为真实伤害，但加成会随时间衰减。"
+          "description": "Mon3tr的防御力提升，技能期间攻击力加成从高逐渐降低，且伤害类型变为真实；期间未击杀任何敌人则技能结束后流失一定比例的最大生命。"
         }
       ],
       "modules": [
@@ -2217,7 +2217,7 @@
           "spCost": 35,
           "initialSp": 20,
           "duration": 25,
-          "description": "增加浮游单元数量，并提升攻击力与攻击速度。"
+          "description": "浮游单元+1，释放浮游单元锁定敌人攻击，攻击力提升，攻击速度提升。"
         },
         {
           "name": "电流翻涌",
@@ -2227,7 +2227,7 @@
           "spCost": 70,
           "initialSp": 0,
           "duration": "无限",
-          "description": "增加浮游单元、扩大攻击范围并提升攻击力，持续时间无限。"
+          "description": "浮游单元+1，释放浮游单元锁定敌人攻击，攻击范围扩大，攻击力提升；持续时间无限。"
         },
         {
           "name": "澄净闪耀",
@@ -2237,7 +2237,7 @@
           "spCost": 35,
           "initialSp": 17,
           "duration": 30,
-          "description": "停止普通攻击，浮游单元覆盖全图并使敌人停顿，是主要的控场爆发。"
+          "description": "停止攻击，浮游单元+2，攻击范围扩大至整个战场，攻击力提升，浮游单元攻击附带停顿；技能期间自身丢失全部视野。"
         }
       ],
       "modules": [
@@ -2357,7 +2357,7 @@
           "spCost": 5,
           "initialSp": 0,
           "duration": null,
-          "description": "强化攻击并产生照明区域，使范围内敌人的隐匿效果失效。"
+          "description": "下次攻击造成高额物理伤害；远程攻击时溅射范围扩大并产生照明区域，使敌人隐匿失效；可充能多次。"
         },
         {
           "name": "暴风号令",
@@ -2367,7 +2367,7 @@
           "spCost": 25,
           "initialSp": 18,
           "duration": null,
-          "description": "转为高额范围物理溅射输出，过载后可追加法术伤害。"
+          "description": "每次攻击造成物理溅射伤害；过载时额外造成法术溅射伤害；技能拥有固定数量弹药，可随时主动关闭。"
         },
         {
           "name": "终极防线",
@@ -2377,7 +2377,7 @@
           "spCost": 35,
           "initialSp": 25,
           "duration": 24,
-          "description": "大幅提升攻击力与攻击频率，过载后输出更高但持续流失生命。"
+          "description": "攻击力提升，攻击间隔大幅缩短；过载时攻击力加成更高，但逐渐流失生命；可随时主动关闭。"
         }
       ],
       "modules": [
@@ -2529,7 +2529,7 @@
           "spCost": 10,
           "initialSp": 0,
           "duration": "5秒",
-          "description": "强化下一次治疗，使其对周围友军也产生持续回复。"
+          "description": "下次攻击使目标和周围友军在一段时间内持续受到治疗。"
         },
         {
           "name": "沛霖",
@@ -2539,7 +2539,7 @@
           "spCost": 13,
           "initialSp": 5,
           "duration": null,
-          "description": "立即治疗多名友方单位，蓄力后额外解除其异常状态。"
+          "description": "立刻恢复攻击范围内多名友方单位的生命；蓄力额外效果：解除目标所受的异常状态。"
         },
         {
           "name": "灯火不灭",
@@ -2549,7 +2549,7 @@
           "spCost": 50,
           "initialSp": 0,
           "duration": null,
-          "description": "提升治疗能力并优先解除友方异常状态，以弹药形式消耗。"
+          "description": "攻击力提升，攻击速度提升，优先治疗处于异常状态中的单位；仅在治疗异常状态单位时消耗子弹，使该次治疗量提升并解除异常状态；攻击装有固定数量子弹。"
         }
       ],
       "modules": [
@@ -2675,7 +2675,7 @@
           "spCost": 7,
           "initialSp": 0,
           "duration": null,
-          "description": "攻击变为多段范围打击，覆盖面大但出手节奏较慢。"
+          "description": "攻击间隔增大，攻击变为五连击的群体攻击，每次造成范围物理伤害；攻击装有固定数量弹药。"
         },
         {
           "name": "协防术式",
@@ -2685,7 +2685,7 @@
           "spCost": 50,
           "initialSp": 35,
           "duration": null,
-          "description": "提升攻击力并为自身与召唤物附加屏障，屏障破碎时反击周围敌人。"
+          "description": "攻击力提升，自身和结构性原理立刻获得屏障，屏障被摧毁时对周围敌人造成法术伤害和战栗，并消耗弹药再次获得屏障；装有固定数量弹药。"
         },
         {
           "name": "工程学十字星",
@@ -2695,7 +2695,7 @@
           "spCost": 35,
           "initialSp": 25,
           "duration": 40,
-          "description": "转为高伤范围法术输出，同时召唤物向前冲锋造成大额物理伤害。"
+          "description": "攻击力大幅提升，攻击间隔大幅增大，攻击变为对十字范围内所有敌人造成法术伤害；结构性原理向前方冲锋，造成物理伤害并停下。"
         }
       ],
       "modules": [
