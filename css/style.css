@@ -267,18 +267,29 @@ main {
   background: var(--accent);
 }
 
-.card-icon {
-  display: block;
-  width: 40px;
-  height: 40px;
-  margin-bottom: 18px;
-  background: var(--accent);
-  opacity: 0.9;
+/* 带图标的横向卡片：图标在左，标题与说明在右 */
+.card--icon {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 22px 22px 24px;
+}
+
+.card-icon-img {
+  flex: none;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  opacity: 0.95;
+}
+
+.card-body {
+  min-width: 0;
 }
 
 .card h3 {
-  margin: 0 0 12px;
-  font-size: 19px;
+  margin: 0 0 10px;
+  font-size: 18px;
   letter-spacing: 0.04em;
 }
 
@@ -287,6 +298,46 @@ main {
   color: var(--body);
   font-size: 14px;
   line-height: 1.7;
+}
+
+/* About 做成整行长条，压在三个卡片下方 */
+.card--wide {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 24px;
+}
+
+.card--wide .card-body {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
+  flex: 1;
+}
+
+.card--wide h3 {
+  flex: none;
+  margin: 0;
+  font-size: 16px;
+}
+
+.card--wide p {
+  margin: 0;
+}
+
+.card-arrow {
+  flex: none;
+  font-size: 18px;
+  line-height: 1;
+  color: var(--muted);
+  transition: transform 0.18s, color 0.18s;
+}
+
+.card--wide:hover .card-arrow,
+.card--wide:focus-visible .card-arrow {
+  color: var(--accent);
+  transform: translateX(4px);
 }
 
 /* --- 干员卡片 ------------------------------------------------------------ */
@@ -841,6 +892,20 @@ main {
   .card-grid--3,
   .op-grid {
     grid-template-columns: 1fr;
+  }
+
+  /* 手机上 About 长条折成上下两段 */
+  .card--wide .card-body {
+    display: block;
+  }
+
+  .card--wide h3 {
+    margin-bottom: 8px;
+  }
+
+  .card-icon-img {
+    width: 52px;
+    height: 52px;
   }
 
   .op-card {
