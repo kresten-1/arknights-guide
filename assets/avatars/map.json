@@ -1,0 +1,116 @@
+[
+  {
+    "name": "能天使",
+    "id": "char_103_angel",
+    "file": "assets/avatars/char_103_angel.png",
+    "size": 55424
+  },
+  {
+    "name": "艾雅法拉",
+    "id": "char_180_amgoat",
+    "file": "assets/avatars/char_180_amgoat.png",
+    "size": 63324
+  },
+  {
+    "name": "闪灵",
+    "id": "char_147_shining",
+    "file": "assets/avatars/char_147_shining.png",
+    "size": 59882
+  },
+  {
+    "name": "夜莺",
+    "id": "char_179_cgbird",
+    "file": "assets/avatars/char_179_cgbird.png",
+    "size": 60251
+  },
+  {
+    "name": "星熊",
+    "id": "char_136_hsguma",
+    "file": "assets/avatars/char_136_hsguma.png",
+    "size": 44631
+  },
+  {
+    "name": "塞雷娅",
+    "id": "char_202_demkni",
+    "file": "assets/avatars/char_202_demkni.png",
+    "size": 58992
+  },
+  {
+    "name": "银灰",
+    "id": "char_172_svrash",
+    "file": "assets/avatars/char_172_svrash.png",
+    "size": 60606
+  },
+  {
+    "name": "煌",
+    "id": "char_017_huang",
+    "file": "assets/avatars/char_017_huang.png",
+    "size": 65100
+  },
+  {
+    "name": "风笛",
+    "id": "char_222_bpipe",
+    "file": "assets/avatars/char_222_bpipe.png",
+    "size": 53296
+  },
+  {
+    "name": "铃兰",
+    "id": "char_358_lisa",
+    "file": "assets/avatars/char_358_lisa.png",
+    "size": 56378
+  },
+  {
+    "name": "棘刺",
+    "id": "char_293_thorns",
+    "file": "assets/avatars/char_293_thorns.png",
+    "size": 46443
+  },
+  {
+    "name": "史尔特尔",
+    "id": "char_350_surtr",
+    "file": "assets/avatars/char_350_surtr.png",
+    "size": 49865
+  },
+  {
+    "name": "泥岩",
+    "id": "char_311_mudrok",
+    "file": "assets/avatars/char_311_mudrok.png",
+    "size": 52461
+  },
+  {
+    "name": "山",
+    "id": "char_264_f12yin",
+    "file": "assets/avatars/char_264_f12yin.png",
+    "size": 55451
+  },
+  {
+    "name": "凯尔希",
+    "id": "char_003_kalts",
+    "file": "assets/avatars/char_003_kalts.png",
+    "size": 56617
+  },
+  {
+    "name": "澄闪",
+    "id": "char_377_gdglow",
+    "file": "assets/avatars/char_377_gdglow.png",
+    "size": 58987
+  },
+  {
+    "name": "号角",
+    "id": "char_4039_horn",
+    "file": "assets/avatars/char_4039_horn.png",
+    "size": 58189
+  },
+  {
+    "name": "流明",
+    "id": "char_4042_lumen",
+    "file": "assets/avatars/char_4042_lumen.png",
+    "size": 54524
+  },
+  {
+    "name": "机械师",
+    "id": "char_4230_mcnist",
+    "file": "assets/avatars/char_4230_mcnist.png",
+    "size": 52843
+  }
+]

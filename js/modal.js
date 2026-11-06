@@ -57,6 +57,10 @@
     var html = '';
 
     html += '<div class="opm-head">';
+    if (op.avatar) {
+      html += '<img class="opm-avatar" src="' + esc(op.avatar) + '" alt="" width="96" height="96">';
+    }
+    html += '<div class="opm-headtext">';
     html += '<h2 class="opm-name" id="opm-title">' + esc(op.name) +
             '<span class="opm-en">' + esc(op.nameEn) + '</span></h2>';
     html += '<ul class="opm-tags">';
@@ -66,7 +70,7 @@
     (op.tags || []).forEach(function (tag) {
       html += '<li>' + esc(tag) + '</li>';
     });
-    html += '</ul></div>';
+    html += '</ul></div></div>';
 
     html += '<dl class="opm-stats">';
     html += statCell('HP', s.hp);

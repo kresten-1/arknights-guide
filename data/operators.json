@@ -146,7 +146,8 @@
             }
           ]
         }
-      ]
+      ],
+      "avatar": "assets/avatars/char_103_angel.png"
     },
     {
       "name": "艾雅法拉",
@@ -291,7 +292,8 @@
             }
           ]
         }
-      ]
+      ],
+      "avatar": "assets/avatars/char_180_amgoat.png"
     },
     {
       "name": "闪灵",
@@ -438,7 +440,8 @@
             }
           ]
         }
-      ]
+      ],
+      "avatar": "assets/avatars/char_147_shining.png"
     },
     {
       "name": "夜莺",
@@ -585,7 +588,8 @@
             }
           ]
         }
-      ]
+      ],
+      "avatar": "assets/avatars/char_179_cgbird.png"
     },
     {
       "name": "星熊",
@@ -733,7 +737,8 @@
             }
           ]
         }
-      ]
+      ],
+      "avatar": "assets/avatars/char_136_hsguma.png"
     },
     {
       "name": "塞雷娅",
@@ -876,7 +881,8 @@
             }
           ]
         }
-      ]
+      ],
+      "avatar": "assets/avatars/char_202_demkni.png"
     },
     {
       "name": "银灰",
@@ -991,7 +997,8 @@
             }
           ]
         }
-      ]
+      ],
+      "avatar": "assets/avatars/char_172_svrash.png"
     },
     {
       "name": "煌",
@@ -1131,7 +1138,8 @@
             }
           ]
         }
-      ]
+      ],
+      "avatar": "assets/avatars/char_017_huang.png"
     },
     {
       "name": "风笛",
@@ -1270,7 +1278,8 @@
             }
           ]
         }
-      ]
+      ],
+      "avatar": "assets/avatars/char_222_bpipe.png"
     },
     {
       "name": "铃兰",
@@ -1416,7 +1425,8 @@
             }
           ]
         }
-      ]
+      ],
+      "avatar": "assets/avatars/char_358_lisa.png"
     },
     {
       "name": "棘刺",
@@ -1561,7 +1571,8 @@
             }
           ]
         }
-      ]
+      ],
+      "avatar": "assets/avatars/char_293_thorns.png"
     },
     {
       "name": "史尔特尔",
@@ -1710,7 +1721,8 @@
             }
           ]
         }
-      ]
+      ],
+      "avatar": "assets/avatars/char_350_surtr.png"
     },
     {
       "name": "泥岩",
@@ -1856,7 +1868,8 @@
             }
           ]
         }
-      ]
+      ],
+      "avatar": "assets/avatars/char_311_mudrok.png"
     },
     {
       "name": "山",
@@ -1999,7 +2012,8 @@
             }
           ]
         }
-      ]
+      ],
+      "avatar": "assets/avatars/char_264_f12yin.png"
     },
     {
       "name": "凯尔希",
@@ -2173,7 +2187,8 @@
             }
           ]
         }
-      ]
+      ],
+      "avatar": "assets/avatars/char_003_kalts.png"
     },
     {
       "name": "澄闪",
@@ -2312,7 +2327,8 @@
             }
           ]
         }
-      ]
+      ],
+      "avatar": "assets/avatars/char_377_gdglow.png"
     },
     {
       "name": "号角",
@@ -2479,7 +2495,8 @@
             }
           ]
         }
-      ]
+      ],
+      "avatar": "assets/avatars/char_4039_horn.png"
     },
     {
       "name": "流明",
@@ -2624,7 +2641,8 @@
             }
           ]
         }
-      ]
+      ],
+      "avatar": "assets/avatars/char_4042_lumen.png"
     },
     {
       "name": "机械师",
@@ -2740,7 +2758,8 @@
             }
           ]
         }
-      ]
+      ],
+      "avatar": "assets/avatars/char_4230_mcnist.png"
     }
   ],
   "skillsUpdated": 57
