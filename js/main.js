@@ -50,4 +50,36 @@
       topBtn.classList.toggle('is-visible', window.scrollY > 400);
     });
   }
+
+  // 4 · Theme switch: dark by default, light remembered in localStorage
+  var root = document.documentElement;
+  var themeBtn = document.createElement('button');
+  themeBtn.type = 'button';
+  themeBtn.className = 'theme-toggle';
+
+  function paintTheme(theme) {
+    if (theme === 'light') {
+      root.setAttribute('data-theme', 'light');
+      themeBtn.textContent = '\u263E';
+      themeBtn.setAttribute('aria-label', 'Switch to dark theme');
+      themeBtn.title = 'Switch to dark theme';
+    } else {
+      root.removeAttribute('data-theme');
+      themeBtn.textContent = '\u2600';
+      themeBtn.setAttribute('aria-label', 'Switch to light theme');
+      themeBtn.title = 'Switch to light theme';
+    }
+  }
+
+  // 首屏已经由各页 <head> 里的内联脚本设好，这里只同步按钮外观
+  paintTheme(root.getAttribute('data-theme') === 'light' ? 'light' : 'dark');
+
+  themeBtn.addEventListener('click', function () {
+    var next = root.getAttribute('data-theme') === 'light' ? 'dark' : 'light';
+    try { localStorage.setItem('theme', next); } catch (err) { }
+    paintTheme(next);
+  });
+
+  var navBar = document.querySelector('.nav');
+  if (navBar) navBar.appendChild(themeBtn);
 })();
