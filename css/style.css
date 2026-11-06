@@ -11,6 +11,8 @@
   --line: #262a33;
   --line-hi: #3a4049;
   --text: #e8eaef;
+  /* 正文用灰：比 --muted 亮一档，保证成段阅读的对比度 */
+  --body: #b8bec9;
   --muted: #8b919c;
   --accent: #f5d90a;
   --max: 1080px;
@@ -176,13 +178,14 @@ main {
 .hero .lead {
   margin: 0;
   max-width: 34em;
-  color: var(--muted);
+  color: var(--body);
   font-size: 16px;
+  line-height: 1.75;
 }
 
 .page-title {
   position: relative;
-  margin: 0 0 12px;
+  margin: 0 0 16px;
   padding-left: 18px;
   font-size: clamp(26px, 4vw, 34px);
   letter-spacing: 0.04em;
@@ -199,12 +202,13 @@ main {
 }
 
 .lead {
-  margin: 0 0 40px;
-  color: var(--muted);
+  margin: 0 0 44px;
+  color: var(--body);
+  line-height: 1.75;
 }
 
 .section-title {
-  margin: 0 0 20px;
+  margin: 0 0 24px;
   font-size: 13px;
   font-weight: 400;
   letter-spacing: 0.24em;
@@ -273,15 +277,16 @@ main {
 }
 
 .card h3 {
-  margin: 0 0 8px;
+  margin: 0 0 12px;
   font-size: 19px;
   letter-spacing: 0.04em;
 }
 
 .card p {
   margin: 0;
-  color: var(--muted);
+  color: var(--body);
   font-size: 14px;
+  line-height: 1.7;
 }
 
 /* --- 干员卡片 ------------------------------------------------------------ */
@@ -289,14 +294,14 @@ main {
 .op-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  gap: 20px;
 }
 
 .op-card {
   position: relative;
   display: flex;
-  gap: 16px;
-  padding: 18px;
+  gap: 18px;
+  padding: 20px;
   background: var(--panel);
   border: 1px solid var(--line);
   transition: border-color 0.18s, transform 0.18s, box-shadow 0.18s;
@@ -347,14 +352,14 @@ main {
 }
 
 .op-name {
-  margin: 0 0 4px;
+  margin: 0 0 6px;
   font-size: 18px;
   letter-spacing: 0.04em;
 }
 
 .op-en {
   display: block;
-  margin-top: 3px;
+  margin-top: 4px;
   font-size: 11px;
   font-weight: 400;
   letter-spacing: 0.1em;
@@ -364,8 +369,8 @@ main {
 
 .op-class {
   display: inline-block;
-  margin: 0 0 6px;
-  padding: 1px 8px;
+  margin: 0 0 10px;
+  padding: 2px 9px;
   font-size: 12px;
   color: var(--text);
   background: #22262e;
@@ -376,9 +381,9 @@ main {
 .op-stats {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 4px 14px;
-  margin: 10px 0;
-  padding: 10px 0 0;
+  gap: 7px 16px;
+  margin: 14px 0;
+  padding: 12px 0 0;
   border-top: 1px solid var(--line);
 }
 
@@ -404,16 +409,17 @@ main {
 }
 
 .op-stars {
-  margin: 0 0 8px;
-  font-size: 13px;
+  margin: 0 0 12px;
+  font-size: 14px;
   letter-spacing: 0.16em;
   color: var(--accent);
 }
 
 .op-note {
   margin: 0;
-  font-size: 13.5px;
-  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--body);
 }
 
 /* --- 指南分块 ------------------------------------------------------------ */
@@ -424,14 +430,18 @@ main {
 }
 
 .block {
-  padding: 28px 26px;
+  padding: 0 26px 28px;
   background: var(--panel);
   border: 1px solid var(--line);
   border-left: 3px solid var(--accent);
 }
 
+/* 标题带浅一档，把“标题区”和“内容区”分开 */
 .block h2 {
-  margin: 0 0 16px;
+  margin: 0 -26px 22px;
+  padding: 18px 26px;
+  background: var(--panel-hi);
+  border-bottom: 1px solid var(--line);
   font-size: 19px;
   letter-spacing: 0.04em;
 }
@@ -439,11 +449,12 @@ main {
 .list {
   margin: 0;
   padding-left: 22px;
-  color: var(--muted);
+  color: var(--body);
 }
 
 .list li {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+  line-height: 1.75;
 }
 
 .list li:last-child {
@@ -456,8 +467,9 @@ main {
 }
 
 .block p {
-  margin: 0 0 12px;
-  color: var(--muted);
+  margin: 0 0 14px;
+  color: var(--body);
+  line-height: 1.75;
 }
 
 .block p:last-child {
@@ -473,10 +485,16 @@ main {
 
 .stage {
   position: relative;
-  padding: 26px;
+  padding: 0 26px 26px;
   background: var(--panel);
   border: 1px solid var(--line);
   transition: border-color 0.18s, transform 0.18s, box-shadow 0.18s;
+}
+
+/* 关卡描述用正文灰，避免和弹窗外的辅助文字一样发灰 */
+.stage > p:not(.stage-pick) {
+  color: var(--body);
+  line-height: 1.75;
 }
 
 /* 关卡卡片是整行宽，放大幅度比小卡片收敛，避免横向溢出 */
@@ -490,12 +508,14 @@ main {
   z-index: 1;
 }
 
+/* 关卡标题带：浅色块 + 分隔线，和说明文字分开 */
 .stage-head {
   display: flex;
   align-items: baseline;
   gap: 14px;
-  margin-bottom: 12px;
-  padding-bottom: 12px;
+  margin: 0 -26px 20px;
+  padding: 16px 26px;
+  background: var(--panel-hi);
   border-bottom: 1px solid var(--line);
 }
 
@@ -514,7 +534,7 @@ main {
 }
 
 .stage h3 {
-  margin: 20px 0 10px;
+  margin: 26px 0 14px;
   font-size: 13px;
   font-weight: 400;
   letter-spacing: 0.2em;
@@ -522,11 +542,12 @@ main {
 }
 
 .stage-pick {
-  margin: 18px 0 0;
-  padding-top: 14px;
+  margin: 20px 0 0;
+  padding-top: 16px;
   border-top: 1px solid var(--line);
   font-size: 14px;
-  color: var(--muted);
+  line-height: 1.7;
+  color: var(--body);
 }
 
 .stage-pick span {
@@ -551,15 +572,16 @@ main {
 }
 
 .about-item h2 {
-  margin: 0 0 10px;
+  margin: 0 0 14px;
   font-size: 17px;
   letter-spacing: 0.04em;
 }
 
 .about-item p {
   margin: 0;
-  color: var(--muted);
+  color: var(--body);
   font-size: 14.5px;
+  line-height: 1.75;
 }
 
 /* --- 页脚 ---------------------------------------------------------------- */
@@ -1103,5 +1125,47 @@ body.is-locked {
 
   .opm-name {
     font-size: 22px;
+  }
+}
+
+/* --- 回到顶部 ------------------------------------------------------------ */
+
+.to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 90;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  font-size: 16px;
+  line-height: 1;
+  color: var(--text);
+  background: var(--panel-hi);
+  border: 1px solid var(--line-hi);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.18s, visibility 0.18s, border-color 0.18s, color 0.18s;
+}
+
+.to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.to-top:hover,
+.to-top:focus-visible {
+  color: var(--accent);
+  border-color: var(--accent);
+  outline: none;
+}
+
+@media (max-width: 720px) {
+  .to-top {
+    right: 14px;
+    bottom: 14px;
+    width: 40px;
+    height: 40px;
   }
 }
