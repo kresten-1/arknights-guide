@@ -47,8 +47,8 @@
     if (sk.recovery) parts.push(sk.recovery);
     if (sk.trigger) parts.push(sk.trigger);
     if (sk.spCost !== null && sk.spCost !== undefined) parts.push('SP ' + sk.spCost);
-    if (sk.initialSp) parts.push('初动 ' + sk.initialSp);
-    if (sk.duration) parts.push('持续 ' + sk.duration);
+    if (sk.initialSp) parts.push('Init ' + sk.initialSp);
+    if (sk.duration) parts.push('Duration ' + sk.duration);
     return parts.join(' · ');
   }
 
@@ -61,8 +61,8 @@
       html += '<img class="opm-avatar" src="' + esc(op.avatar) + '" alt="" width="96" height="96">';
     }
     html += '<div class="opm-headtext">';
-    html += '<h2 class="opm-name" id="opm-title">' + esc(op.name) +
-            '<span class="opm-en">' + esc(op.nameEn) + '</span></h2>';
+    html += '<h2 class="opm-name" id="opm-title">' + esc(op.nameEn) +
+            '<span class="opm-en">' + esc(op.name) + '</span></h2>';
     html += '<ul class="opm-tags">';
     html += '<li class="is-accent">' + new Array((op.rarity || 0) + 1).join('★') + '</li>';
     html += '<li>' + esc(op.class) + ' · ' + esc(op.branch) + '</li>';
@@ -108,7 +108,7 @@
       html += '<section class="opm-section"><h3>Modules</h3>';
       op.modules.forEach(function (m) {
         var parts = (m.levels || []).map(function (lv) {
-          return 'Lv.' + lv.level + '：' + (lv.effect || '');
+          return 'Lv.' + lv.level + ': ' + (lv.effect || '');
         });
         html += itemBlock(m.name, m.code, parts.join(' / ') || '—');
       });
