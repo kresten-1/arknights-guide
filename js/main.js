@@ -82,4 +82,96 @@
 
   var navBar = document.querySelector('.nav');
   if (navBar) navBar.appendChild(themeBtn);
+
+  // 5 · Hero carousel: only on the home page, so guard on the element
+  var hero = document.getElementById('hero');
+  var track = document.getElementById('hero-track');
+
+  if (hero && track) {
+    var slides = hero.querySelectorAll('.hero-slide');
+    var dots = hero.querySelectorAll('.hero-dot');
+    var pauseBtn = hero.querySelector('.hero-pause');
+    var current = 0;
+    var timer = null;
+    var playing = !reduceMotion.matches;
+    var INTERVAL = 6000;
+
+    function show(next) {
+      if (!slides.length) return;
+      current = (next + slides.length) % slides.length;
+      track.style.transform = 'translateX(-' + (current * 100) + '%)';
+
+      Array.prototype.forEach.call(dots, function (dot, i) {
+        var on = i === current;
+        dot.classList.toggle('is-active', on);
+        dot.setAttribute('aria-selected', on ? 'true' : 'false');
+      });
+
+      Array.prototype.forEach.call(slides, function (slide, i) {
+        var on = i === current;
+        slide.setAttribute('aria-hidden', on ? 'false' : 'true');
+        slide.inert = !on;
+      });
+    }
+
+    function stop() {
+      if (timer) {
+        window.clearInterval(timer);
+        timer = null;
+      }
+    }
+
+    function start() {
+      stop();
+      if (!playing || document.hidden || slides.length < 2) return;
+      timer = window.setInterval(function () { show(current + 1); }, INTERVAL);
+    }
+
+    Array.prototype.forEach.call(dots, function (dot, i) {
+      dot.addEventListener('click', function () {
+        show(i);
+        start();
+      });
+    });
+
+    if (pauseBtn) {
+      var paintPause = function () {
+        pauseBtn.textContent = playing ? '\u275A\u275A' : '\u25B6';
+        pauseBtn.setAttribute('aria-label', playing ? 'Pause the slideshow' : 'Play the slideshow');
+      };
+
+      pauseBtn.addEventListener('click', function () {
+        playing = !playing;
+        paintPause();
+        if (playing) { start(); } else { stop(); }
+      });
+
+      paintPause();
+    }
+
+    // Hovering or focusing the banner holds it still
+    hero.addEventListener('mouseenter', stop);
+    hero.addEventListener('mouseleave', start);
+    hero.addEventListener('focusin', stop);
+    hero.addEventListener('focusout', start);
+
+    // Swipe on touch screens
+    var swipeFrom = 0;
+    hero.addEventListener('touchstart', function (e) {
+      swipeFrom = e.touches[0].clientX;
+      stop();
+    }, { passive: true });
+    hero.addEventListener('touchend', function (e) {
+      var dx = e.changedTouches[0].clientX - swipeFrom;
+      if (Math.abs(dx) > 40) show(current + (dx < 0 ? 1 : -1));
+      start();
+    }, { passive: true });
+
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) { stop(); } else { start(); }
+    });
+
+    show(0);
+    start();
+  }
 })();

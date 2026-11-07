@@ -46,10 +46,34 @@
   </header>
 
   <main>
-    <section class="hero">
-      <p class="eyebrow">RHODES ISLAND · GUIDE</p>
-      <h1>Rhodes Island Guide</h1>
-      <p class="lead">An Arknights starter guide for new Doctors.</p>
+    <section class="hero" id="hero" aria-roledescription="carousel" aria-label="Welcome">
+      <div class="hero-viewport">
+        <div class="hero-track" id="hero-track">
+
+          <article class="hero-slide" aria-label="Slide 1 of 2">
+            <p class="eyebrow">RHODES ISLAND · GUIDE</p>
+            <h1>Welcome to<br>Rhodes Island Guide</h1>
+            <p class="lead">An Arknights starter guide for new Doctors. Check the operators you already own, then read the beginner guide before you spend a single LMD.</p>
+            <a class="hero-cta" href="operators.html">Browse operators<span aria-hidden="true">→</span></a>
+          </article>
+
+          <article class="hero-slide" aria-label="Slide 2 of 2">
+            <p class="eyebrow">GOOD LUCK, DOCTOR</p>
+            <h2 class="hero-title">Enjoy the game</h2>
+            <p class="lead">Take your time, mind your sanity, and may your pulls be kind. Every page here is free to read in whatever order suits you.</p>
+            <a class="hero-cta" href="guide.html">Read the beginner guide<span aria-hidden="true">→</span></a>
+          </article>
+
+        </div>
+      </div>
+
+      <div class="hero-nav">
+        <div class="hero-dots" role="tablist" aria-label="Choose a slide">
+          <button class="hero-dot is-active" type="button" role="tab" aria-selected="true" aria-label="Slide 1"></button>
+          <button class="hero-dot" type="button" role="tab" aria-selected="false" aria-label="Slide 2"></button>
+        </div>
+        <button class="hero-pause" type="button" aria-label="Pause the slideshow">❚❚</button>
+      </div>
     </section>
 
     <section aria-labelledby="entry-title">
@@ -93,7 +117,7 @@
 
   <footer class="site-footer">
     <p class="footer-title">RHODES ISLAND GUIDE</p>
-    <p class="footer-copy">Rhodes Island Guide · © 2026 placeholder · A coursework project, not affiliated with the game's official site</p>
+    <p class="footer-copy">Rhodes Island Guide · © 2026 kristen · A coursework project, not affiliated with the game's official site</p>
   </footer>
 
   <script src="js/main.js"></script>
