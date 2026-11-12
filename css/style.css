@@ -744,6 +744,20 @@ main {
   letter-spacing: 0.04em;
 }
 
+/* 关卡地图截图：左右溢出到卡片边缘，与标题带同宽 */
+.stage-map {
+  margin: 0 -26px 22px;
+  background: var(--panel-hi);
+  border-bottom: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.stage-map img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .stage h3 {
   margin: 26px 0 14px;
   font-size: 13px;
