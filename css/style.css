@@ -744,11 +744,12 @@ main {
   letter-spacing: 0.04em;
 }
 
-/* 关卡地图截图：左右溢出到卡片边缘，与标题带同宽 */
+/* 关卡地图截图：居中限宽插图，点击可看原图 */
 .stage-map {
-  margin: 0 -26px 22px;
+  margin: 0 auto 22px;
+  max-width: 520px;
   background: var(--panel-hi);
-  border-bottom: 1px solid var(--line);
+  border: 1px solid var(--line);
   overflow: hidden;
 }
 
@@ -756,6 +757,22 @@ main {
   display: block;
   width: 100%;
   height: auto;
+  transition: opacity 0.18s ease;
+}
+
+.stage-map-open {
+  display: block;
+  cursor: zoom-in;
+}
+
+.stage-map-open:hover img,
+.stage-map-open:focus-visible img {
+  opacity: 0.82;
+}
+
+.stage-map-open:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 2px var(--accent);
 }
 
 .stage h3 {
