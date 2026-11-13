@@ -94,7 +94,7 @@
     var current = 0;
     var timer = null;
     var playing = !reduceMotion.matches;
-    var INTERVAL = 6000;
+    var INTERVAL = 5000;
 
     function show(next) {
       if (!slides.length) return;

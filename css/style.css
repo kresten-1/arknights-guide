@@ -29,6 +29,9 @@
   --halo: rgba(245, 217, 10, 0.18);
   --icon-filter: none;
   --max: 1080px;
+  /* 首屏配图右侧的渐隐遮罩 */
+  --hero-veil: rgba(11, 12, 15, 0.68);
+  --hero-veil-far: rgba(11, 12, 15, 0.16);
 }
 
 /* 浅色主题：只覆盖变量，所有组件自动跟随 */
@@ -56,6 +59,8 @@
   --halo: rgba(138, 98, 0, 0.12);
   /* 白色图标在白底上会消失，直接反相成黑色 */
   --icon-filter: invert(1);
+  --hero-veil: rgba(238, 240, 244, 0.72);
+  --hero-veil-far: rgba(238, 240, 244, 0.2);
 }
 
 *,
@@ -240,9 +245,49 @@ main {
 }
 
 .hero-slide {
+  position: relative;
   flex: 0 0 100%;
   min-width: 0;
   padding: 48px 0 40px;
+}
+
+/* 首屏配图：只做气氛，压在文字后面，右侧渐隐进背景 */
+.hero-media {
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 78% 16%;
+  opacity: 0.2;
+  filter: saturate(0.7) brightness(0.85);
+  pointer-events: none;
+  /* 四边渐隐，避免图片露出一块矩形边界 */
+  -webkit-mask-image:
+    linear-gradient(180deg, transparent 0%, #000 24%, #000 70%, transparent 100%),
+    linear-gradient(90deg, transparent 0%, #000 26%, #000 94%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(180deg, transparent 0%, #000 24%, #000 70%, transparent 100%),
+    linear-gradient(90deg, transparent 0%, #000 26%, #000 94%, transparent 100%);
+  mask-composite: intersect;
+}
+
+.hero-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg,
+    var(--bg) 28%,
+    var(--hero-veil) 62%,
+    var(--hero-veil-far) 100%);
+}
+
+.hero-media--1 { background-image: url("../assets/hero/hero-1.jpg"); }
+.hero-media--2 { background-image: url("../assets/hero/hero-2.jpg"); }
+
+.hero-slide > *:not(.hero-media) {
+  position: relative;
+  z-index: 1;
 }
 
 .hero h1,
@@ -338,6 +383,67 @@ main {
 @media (prefers-reduced-motion: reduce) {
   .hero-track {
     transition: none;
+  }
+}
+
+/* 内页标题区：标题与说明背后各压一张淡化的活动图 */
+.page-head {
+  position: relative;
+  margin: 0 0 40px;
+  /* 每页可单独调背景强度：图越暗，需要的不透明度越高 */
+  --art-opacity: 0.32;
+  --art-brightness: 0.66;
+  --art-pos: 62% 45%;
+  --art-size: cover;
+}
+
+.page-head::before {
+  content: "";
+  position: absolute;
+  inset: -14px -28px -10px;
+  background-repeat: no-repeat;
+  background-size: var(--art-size);
+  background-position: var(--art-pos);
+  opacity: var(--art-opacity);
+  /* 模糊掉 KV 上的活动文字，只留色块与光影 */
+  filter: blur(3px) saturate(var(--art-saturate, 1.2)) brightness(var(--art-brightness));
+  transform: scale(1.08);
+  -webkit-mask-image:
+    linear-gradient(180deg, transparent 0%, #000 26%, #000 52%, transparent 78%),
+    linear-gradient(100deg, transparent 0%, #000 18%, #000 58%, transparent 86%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(180deg, transparent 0%, #000 26%, #000 52%, transparent 78%),
+    linear-gradient(100deg, transparent 0%, #000 18%, #000 58%, transparent 86%);
+  mask-composite: intersect;
+  pointer-events: none;
+}
+
+.page-head > * {
+  position: relative;
+  z-index: 1;
+}
+
+.page-head .lead { margin-bottom: 0; }
+
+.page-head--operators { --art-opacity: 0.5; --art-brightness: 0.85; --art-pos: 55% 45%; }
+.page-head--guide { --art-opacity: 0.45; --art-brightness: 0.65; --art-saturate: 1.1; --art-pos: 78% 50%; }
+.page-head--stages { --art-opacity: 0.5; --art-brightness: 0.5; --art-saturate: 1.7; --art-pos: 50% 45%; }
+
+.page-head--operators::before { background-image: url("../assets/hero/page-operators.jpg"); }
+.page-head--guide::before { background-image: url("../assets/hero/page-guide.jpg"); }
+.page-head--stages::before { background-image: url("../assets/hero/page-stages.jpg"); }
+
+/* 浅色主题下同样的图会更抢，压低一档 */
+:root[data-theme="light"] .page-head { --art-opacity: 0.16; }
+
+@media (max-width: 720px) {
+  .page-head::before {
+    inset: -18px -20px -12px;
+    opacity: calc(var(--art-opacity) * 0.85);
+    background-position: 68% 40%;
+    -webkit-mask-image: linear-gradient(100deg, transparent 0%, #000 30%, #000 66%, transparent 100%);
+    mask-image: linear-gradient(100deg, transparent 0%, #000 30%, #000 66%, transparent 100%);
   }
 }
 
